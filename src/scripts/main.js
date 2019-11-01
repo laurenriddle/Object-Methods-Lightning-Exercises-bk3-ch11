@@ -1,6 +1,6 @@
 // console.log("This is working!")
 
-/* Lightning Exercise 2: Copy the code below and paste it above your object.
+/* Part 1: Lightning Exercise 2: Copy the code below and paste it above your object.
 
 const dateVisited = "visitDate"
 const owed = "amountBilled"
@@ -12,7 +12,7 @@ const dateVisited = "visitDate"
 const owed = "amountBilled"
 const patient = "patientName"
 
-/* Lightning Exercise 1: Create an object that represents a bill from your doctor's office. It should have the following properties: officeName, streetAddress, doctorName, patientName, visitDate, amountBilled, dueDate. You provide example values for each one. */
+/* Part 1: Lightning Exercise 1: Create an object that represents a bill from your doctor's office. It should have the following properties: officeName, streetAddress, doctorName, patientName, visitDate, amountBilled, dueDate. You provide example values for each one. */
 const doctorBill = [
     {
         officeName: "Crossroads Medical Group",
@@ -29,7 +29,7 @@ console.log(doctorBill[0][dateVisited])
 console.log(doctorBill[0][owed])
 console.log(doctorBill[0][patient])
 
-/* Use Object.values() to output all the property values to the console in Chrome. */
+/* Part 1: Lightning Exercise 3: Use Object.values() to output all the property values to the console in Chrome. */
 
 doctorBill.forEach(bill => {
 
@@ -39,9 +39,14 @@ doctorBill.forEach(bill => {
     }
 })
 
-/* Lightning Exercise 1: Output all of the key names from your doctor's office bill to the console in Chrome. */
+/* Part 2: Lightning Exercise 1: Output all of the key names from your doctor's office bill to the console in Chrome.
 
+Part 2: Lightning Exercise 2: Output all of the key names from your doctor's office bill to the DOM inside a parent <section> element. Wrap each one in a <span> element.
+*/
+
+const outputElement = document.querySelector("#container")
 const firstDoctorBill = doctorBill[0]
 for (key of Object.keys(firstDoctorBill)) {
-    console.log(key)
+    outputElement.innerHTML += `<span>${key}</span>`
+    // console.log(key)
 }
