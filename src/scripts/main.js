@@ -44,10 +44,10 @@ doctorBill.forEach(bill => {
 Part 2: Lightning Exercise 2: Output all of the key names from your doctor's office bill to the DOM inside a parent <section> element. Wrap each one in a <span> element.
 */
 
-const outputElement = document.querySelector("#container")
+const billOutputElement = document.querySelector("#container")
 const firstDoctorBill = doctorBill[0]
 for (key of Object.keys(firstDoctorBill)) {
-    outputElement.innerHTML += `<span>${key}</span>`
+    billOutputElement.innerHTML += `<span>${key}</span>`
     // console.log(key)
 }
 
@@ -60,3 +60,12 @@ const favoriteDinner = [
         vegetarian: true
     }
 ]
+const foodOutputElement = document.querySelector("#container")
+
+/* Lightning Exercise 2: Output all of the key/value pairs into the DOM inside an <article> element with a class of food. */
+
+favoriteDinner.forEach(dinner => {
+    foodOutputElement.innerHTML = `<h1>Favorite Foods</h1>`
+    for (const entry of Object.entries(dinner))
+foodOutputElement.innerHTML += `<article class="food">${entry[0]}: ${entry[1]}</article>`
+})
