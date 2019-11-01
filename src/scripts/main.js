@@ -6,16 +6,26 @@ const dateVisited = "visitDate"
 const owed = "amountBilled"
 const patient = "patientName"
 
-const doctorBill = {
-    officeName: "Crossroads Medical Group", 
-    streetAddress: "491 N Sage Rd Suite 200, White House, TN 37188", 
-    doctorName: "Jordan Jeffrey S MD", 
-    patientName: "John Doe", 
-    visitDate: "11/1/2019", 
-    amountBilled: 291.38, 
-    dueDate: "11/15/2019"
-}
+const doctorBill = [
+    {
+        officeName: "Crossroads Medical Group",
+        streetAddress: "491 N Sage Rd Suite 200, White House, TN 37188",
+        doctorName: "Jordan Jeffrey S MD",
+        patientName: "John Doe",
+        visitDate: "11/1/2019",
+        amountBilled: 291.38,
+        dueDate: "11/15/2019"
+    }
+]
 
-console.log(doctorBill[dateVisited])
-console.log(doctorBill[owed])
-console.log(doctorBill[patient])
+console.log(doctorBill[0][dateVisited])
+console.log(doctorBill[0][owed])
+console.log(doctorBill[0][patient])
+
+doctorBill.forEach(bill => {
+
+    // Iterate all of the values of the current car
+    for (const value of Object.values(bill)) {
+        console.log(value)
+    }
+})
