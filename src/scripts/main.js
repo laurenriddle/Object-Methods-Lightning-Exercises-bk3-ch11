@@ -50,3 +50,13 @@ for (key of Object.keys(firstDoctorBill)) {
     outputElement.innerHTML += `<span>${key}</span>`
     // console.log(key)
 }
+
+/* Lightning Exercise 1: Create an object to represent your favorite dinner item (e.g. meatloaf, spaghetti, fried fish, gumbo). Each object should have a name property, but you can add any other properties that you like, such as size, weight, ethnicity, vegetarian boolean. */
+
+const favoriteDinner = [
+    {
+        name: "Spaghetti",
+        ethnicity: "Italian",
+        vegetarian: true
+    }
+]
