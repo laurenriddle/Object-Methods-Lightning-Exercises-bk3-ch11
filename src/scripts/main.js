@@ -2,6 +2,9 @@
 
 /* Lightning Exercise 1: Create an object that represents a bill from your doctor's office. It should have the following properties: officeName, streetAddress, doctorName, patientName, visitDate, amountBilled, dueDate. You provide example values for each one. */
 
+const dateVisited = "visitDate"
+const owed = "amountBilled"
+const patient = "patientName"
 
 const doctorBill = {
     officeName: "Crossroads Medical Group", 
@@ -12,3 +15,7 @@ const doctorBill = {
     amountBilled: 291.38, 
     dueDate: "11/15/2019"
 }
+
+console.log(doctorBill[dateVisited])
+console.log(doctorBill[owed])
+console.log(doctorBill[patient])
